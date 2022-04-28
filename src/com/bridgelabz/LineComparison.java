@@ -30,10 +30,13 @@ public class LineComparison {
 
         System.out.printf("length of 1st end points are : %.2f %n", length_of_line1);
         System.out.printf("length of 2nd end points are : %.2f %n", length_of_line2);
-        boolean ans = length_of_line1.equals(length_of_line2);
-        if (ans == true)
+
+        int res = length_of_line1.compareTo(length_of_line2);
+        if (res > 0) {
+            System.out.println("Length of first end points is greater than length of second end points");
+        } else if (res < 0) {
+            System.out.println("Length of first end points is less than length of second end points");
+        } else
             System.out.println("Both lines are equal.");
-        else
-            System.out.println("Both lines are not equal.");
     }
 }
